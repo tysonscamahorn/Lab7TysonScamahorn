@@ -30,12 +30,12 @@ Console.WriteLine("9:Feet To Inch");
 Console.WriteLine("10:Feet To Yard");
 Console.WriteLine("11:Yard To Inch");
 Console.WriteLine("12:Yard To Feet");
-Console.WriteLine("13:");
-Console.WriteLine("14:");
-Console.WriteLine("15:");
-Console.WriteLine("16:");
-Console.WriteLine("17:");
-Console.WriteLine("18:");
+Console.WriteLine("13:Seconds To Minutes");
+Console.WriteLine("14:Seconds To Hours");
+Console.WriteLine("15:Minutes To Seconds");
+Console.WriteLine("16:Minutes To Hours");
+Console.WriteLine("17:Hours To Seconds");
+Console.WriteLine("18:Hours To Minutes");
 Console.WriteLine("19: exit");
 int changeTo = int.Parse(Console.ReadLine());
 if(changeTo == 1) CelsiusToFahrenheit();
@@ -240,30 +240,114 @@ double answer = Convert.ToDouble(Console.ReadLine());
 }
 if(changeTo == 12)YardToFeet();
 
+void SecondsToMinutes () {
+double minutes;
+Console.WriteLine ("Pick a number in Seconds");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Seconds = answer;
+
+         minutes = (answer /60 ) ;
+         Console.WriteLine("Seconds: S=" + answer);
+         Console.WriteLine("Minutes: M=" + minutes);
+
+         Console.ReadLine();
+( int Seconds, int Minutes) SecondsToMinutes =  ( 60, 1);
+
+
 
 }
+if(changeTo == 13)SecondsToMinutes();
+
+void SecondsToHours () {
+double Hours;
+Console.WriteLine ("Pick a number in Seconds");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Seconds = answer;
+
+         Hours = (answer/3600 ) ;
+         Console.WriteLine("Seconds: S=" + answer);
+         Console.WriteLine("Hours: H=" + Hours);
+
+         Console.ReadLine();
+( int Seconds, int Hours) SecondsToHours =  ( 3600, 1);
 
 
 
+}
+if(changeTo == 14)SecondsToHours();
+
+void MinutesToSeconds () {
+double Seconds;
+Console.WriteLine ("Pick a number in Minutes");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Minutes = answer;
+
+         Seconds = (answer *60 ) ;
+         Console.WriteLine("Minutes: M=" + answer);
+         Console.WriteLine("Seconds: S=" + Seconds);
+
+         Console.ReadLine();
+( int Minutes, int Seconds) MinutesToSeconds =  ( 1, 60);
 
 
 
+}
+if(changeTo == 15)MinutesToSeconds();
+
+void MinutesToHours () {
+double Hours;
+Console.WriteLine ("Pick a number in Minutes");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Minutes = answer;
+
+         Hours = (answer /60 ) ;
+         Console.WriteLine("Minutes: M=" + answer);
+         Console.WriteLine("Hours: H=" + Hours);
+
+         Console.ReadLine();
+( int Minutes, int Hours) MinutesToHours =  ( 60, 1);
 
 
 
+}
+if(changeTo == 16)MinutesToHours();
+
+void HoursToSeconds () {
+double Seconds;
+Console.WriteLine ("Pick a number in Hours");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Hours = answer;
+
+         Seconds = (answer *3600 ) ;
+         Console.WriteLine("Hours: H=" + answer);
+         Console.WriteLine("Seconds: S=" + Seconds);
+
+         Console.ReadLine();
+( int Hours, int Seconds) HoursToSeconds =  ( 1, 3600);
 
 
 
+}
+if(changeTo == 17)HoursToSeconds();
+
+void HoursToMinutes () {
+double Minutes;
+Console.WriteLine ("Pick a number in Hours");
+double answer = Convert.ToDouble(Console.ReadLine());
+         double Hours = answer;
+
+         Minutes = (answer *60 ) ;
+         Console.WriteLine("Hours: H=" + answer);
+         Console.WriteLine("Minutes: M=" + Minutes);
+
+         Console.ReadLine();
+( int Hours, int Minutes) HoursToMinutes =  ( 1, 60);
 
 
 
-
-
-
-
-
-
-
+}
+if(changeTo == 18)HoursToMinutes();
+}
 
 
 enum temperature{Fahrenheit, Celsius, Kelvin}
